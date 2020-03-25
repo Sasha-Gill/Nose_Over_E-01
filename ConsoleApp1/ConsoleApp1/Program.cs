@@ -14,7 +14,7 @@ namespace ConsoleApp1
 
             string Name;
             string Password;
-            Console.WriteLine("Write your name: ");
+           Console.WriteLine("Write your name: ");
             Name = Console.ReadLine();
             Console.WriteLine("Write your password: ");
             Password = Console.ReadLine();
@@ -34,6 +34,24 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Hello, World "+i); //lade till + i för att kunna se nummer på varje mening.
                 i++;
+            }
+
+            while (Name == "noname" && Password == "nopass")
+            { 
+            
+                Console.WriteLine("Write your name: ");
+                Name = Console.ReadLine();
+                Console.WriteLine("Write your password: ");
+                Password = Console.ReadLine();
+
+                if (Name == "noname" && Password == "nopass")
+                {
+                    Console.WriteLine("Welcome!");
+                }
+                else
+                {
+                    Console.WriteLine("Wrong username or password!");
+                }
             }
 
 
