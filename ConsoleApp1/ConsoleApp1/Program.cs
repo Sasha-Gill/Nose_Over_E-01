@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            /* if (6>3)
+            if (6>3)
              { 
              Console.WriteLine("Hello, World!");
                  Console.ReadLine();
@@ -35,27 +35,29 @@ namespace ConsoleApp1
                  Console.WriteLine("Hello, World "+i); //lade till + i för att kunna se nummer på varje mening.
                  i++;
              }
-             */
+            
 
-                 string Name2= "noname";
-                 string Password2 = "nopass";
+                 string Name2 = "";
+                 string Password2 = "";
 
             
-            while (Name2 == "noname" && Password2 == "nopass") 
+            while (Name2 != "noname" && Password2 != "nopass") //loopen körs så länge name och pass inte är "noname" samt "Nopass"
             {
-                
+
                 Console.WriteLine("Write your name: ");
                     Name2 = Console.ReadLine();
                 Console.WriteLine("Write your password: ");
                     Password2 = Console.ReadLine();
 
-                       if (Name2 == "noname" && Password2 == "nopass")
+                if (Name2 == "noname" && Password2 == "nopass")
                 {
-                    Console.WriteLine("Welcome! " +Name2);
+                    Console.WriteLine("Welcome " +Name2 + "!");
+                    Console.ReadLine();
                 }
-                else
+                else 
                 {
                     Console.WriteLine("Wrong username or password!");
+                    Console.ReadLine();
                 }
             }
 
