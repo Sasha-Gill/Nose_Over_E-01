@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            if (6>3)
+            /*if (6>3)
              { 
              Console.WriteLine("Hello, World!");
                  Console.ReadLine();
@@ -59,9 +59,24 @@ namespace ConsoleApp1
                     Console.WriteLine("Wrong username or password!");
                     Console.ReadLine();
                 }
+            }*/
+
+            for (int p = 0; p < 5; p++)//skapar en for-loop som körs så länge 5 är störe än int p.
+            {
+               // Console.WriteLine(p);   Till för mig att kunna se
+                int Tal;
+                Console.WriteLine("Skriv ett tal:");
+                String SvarTal = Console.ReadLine();//talet sparas som en string
+                bool convert = int.TryParse(SvarTal, out Tal);//talet konverteras från string till int mha TryParse
+                
+                if (Tal > 5)//ifall talet är större än 5 kör if-satsen
+                {
+                    Console.WriteLine("Högre än 5!");
+                    Console.ReadLine();
+                }
             }
 
-
+            while ( )
         }
     }
 }
