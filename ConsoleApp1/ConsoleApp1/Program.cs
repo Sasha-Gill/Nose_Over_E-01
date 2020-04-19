@@ -59,7 +59,7 @@ namespace ConsoleApp1
                     Console.WriteLine("Wrong username or password!");
                     Console.ReadLine();
                 }
-            }*/
+            }
 
             for (int p = 0; p < 5; p++)//skapar en for-loop som körs så länge 5 är störe än int p.
             {
@@ -74,12 +74,45 @@ namespace ConsoleApp1
                     Console.WriteLine("Högre än 5!");
                     Console.ReadLine();
                 }
-            }
+            }*/
 
-            while ( )
+          
+
+
+            //SLUTÖVNING
+            Random generator = new Random(); //generator för att slumpa talen
+            string Tal = "";// en string för att ta upp användaers gissning
+            int rng = generator.Next(1, 10);//int som väler ett tal mellan 1 och 10
+            int Nummer = 0;//talet som de gissat på omvandöat till en int. startar som 0.
+            int Correct = 0; //en int för att se om man har svarat korrekt, +1 när man får rätt svar
+            bool nr = int.TryParse(Tal, out Nummer);//skapar en bool för att kunna tryParsea strings till ints
+
+            while (nr == false || Correct != 0)
             {
+                Console.WriteLine("Guess the number between 1-10! ");
+                Tal = Console.ReadLine();//gissningen sparas som en string
+                nr = int.TryParse(Tal, out Nummer);//talet konverteras från en string till int
 
+                if (Nummer == rng)//ifall gissningen stämmer med talet 
+                   {
+                    Console.WriteLine("Congratulations! you guessed right!");
+                    Console.ReadLine();
+                    Correct++;//när man får rätt svar så får correct +1 och då körs inte loopen längre.
+                   }
+                if (Nummer < rng)//ifall gissningen är lägre än Talet sker detta
+                   {
+                    Console.WriteLine("Guess is too low, try again!");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+                if (Nummer > rng)//ifall gissningen är högre än talet sker detta
+                {
+                    Console.WriteLine("Guess is too high, try again!");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
             }
+
         }
     }
 }
